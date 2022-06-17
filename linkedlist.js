@@ -13,6 +13,7 @@ class linkedList {
         this.length = 0;
     };
     
+    // add value to the head of the LinkedList
     addHead(val) {
     let newNode = new Node(val);
     
@@ -29,6 +30,7 @@ class linkedList {
     return this;
     }
     
+    // add value to the tail of the LinkedList
     addTail(val) {
         let newNode = new Node(val);
         
@@ -45,6 +47,7 @@ class linkedList {
         return this;
     }
     
+    // remove from the head of the LinkedList
     removeHead() {
         let removed = this.head;
         
@@ -57,6 +60,7 @@ class linkedList {
         return removed;
     }
     
+    // remove from the tail of the LinkedList
     removeTail() {
         let removed = this.tail;
         
@@ -74,6 +78,7 @@ class linkedList {
         return removed;
     }
     
+    // Get value using index as the input 
     find(index) {
         let current
         
@@ -90,6 +95,7 @@ class linkedList {
         return current;
     }
     
+    // Insert value to the LinkedList
     insert(val, index) {
         if (index < 0 || index > this.length) return null;
         if (index === this.length) return this.addTail(val);
@@ -107,6 +113,7 @@ class linkedList {
         return true;
     }
     
+    // remove value from the LinkedList using index as an input
     remove(index) {
         if (index < 0 || index >= this.length) return null;
         if (index === this.length) return this.removeTail();
@@ -121,6 +128,7 @@ class linkedList {
         return removed;
     }
     
+    // Update the LinkedList
     update(val, index) {
         let node = this.find(index);
         if (node) node.val = val;
