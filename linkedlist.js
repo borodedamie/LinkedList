@@ -6,13 +6,13 @@ class Node {
     };
 };
 
-class linkedList {
+class LinkedList {
     constructor() {
         this.head = null;
         this.tail = null;
         this.length = 0;
     };
-    
+  
     // add value to the head of the LinkedList
     addHead(val) {
     let newNode = new Node(val);
@@ -27,7 +27,8 @@ class linkedList {
     this.head = newNode;
     
     this.length++;
-    return this;
+    console.log(this)
+    
     }
     
     // add value to the tail of the LinkedList
@@ -44,7 +45,7 @@ class linkedList {
         this.tail = newNode;
         
         this.length++;
-        return this;
+        console.log(this)
     }
     
     // remove from the head of the LinkedList
@@ -135,3 +136,7 @@ class linkedList {
         return node;
     }
 };
+
+let doublyList = new LinkedList()
+doublyList.addHead(10)
+doublyList.addTail(20)
