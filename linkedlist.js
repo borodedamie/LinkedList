@@ -139,4 +139,4 @@ class LinkedList {
 
 let doublyList = new LinkedList()
 doublyList.addHead(10)
-doublyList.addTail(20)
+// doublyList.addTail(20)

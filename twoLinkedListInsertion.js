@@ -6,6 +6,8 @@ class Node {
     }
 }
 
+// Runtime 84ms
+// Memory usage 49.1 MB
 twoLinkedListInsertion = (headA, headB) => {
     let pointerA = headA,
         pointerB = headB
@@ -17,3 +19,27 @@ twoLinkedListInsertion = (headA, headB) => {
 
     return pointerA
 }
+
+// Runtime 
+const map = new WeakMap()
+    
+    while(headA || headB) {
+        if(headA) {
+            if(map.has(headA)){
+                return headA
+            }
+            
+            map.set(headA, true)
+            headA = headA.next
+        }
+        
+        if(headB) {
+            if(map.has(headB)) {
+                return headB
+            }
+            
+            map.set(headB, true)
+            headB = headB.next
+        }
+    }
+        return null
